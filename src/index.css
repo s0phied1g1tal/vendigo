@@ -1,13 +1,73 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'TiltWarp', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #FF0090;
+  color: #FFFFFF;
+}
+
+.about {
+  padding: 50px 20px;
+  background-color: #FFB54F;
+  text-align: center;
+}
+
+.features {
+  padding: 50px 20px;
+  background-color: #1C91D9;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.process {
+  padding: 50px 20px;
+  background-color: #171311;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.bio {
+  padding: 50px 20px;
+  background-color: #FFFFFF;
+  color: #171311;
+  text-align: center;
+}
+
+.contact {
+  padding: 50px 20px;
+  background-color: #FF0090;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.cta {
+  background-color: #FFFFFF;
+  color: #FF0090;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background-color: #FFB54F;
+}
+
+footer {
+  background-color: #171311;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1em 0;
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li, ol li {
+  margin: 10px 0;
 }
