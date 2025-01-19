@@ -1,43 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendigo - The Interactive Vending Experience</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body class="bg-black text-white font-sans">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <!-- Navigation Section (Fixed to top) -->
+  <header class="fixed top-0 left-0 right-0 flex justify-between items-center py-6 px-12 bg-black z-50">
+    <a href="#" class="text-white font-bold text-xl">Home</a>
+    <a href="#portfolio" class="text-white font-bold text-xl">Portfolio</a>
+  </header>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <!-- Hero Section -->
+  <header class="relative w-full h-screen" style="background-image: url('./images/concept.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Background overlay for better contrast -->
+    <div class="relative z-10 flex justify-between items-center text-white py-24 px-24 mx-12"> <!-- Increased padding and margins -->
+      <!-- Left side: Logo, subtext, and button -->
+      <div class="text-left">
+        <img src="./images/logo.png" alt="Vendigo Logo" class="logo mb-2"> <!-- Custom class for logo -->
+        <p class="text-xl mt-2">The interactive vending experience</p>
+        <a href="#" class="bg-pink-500 text-white py-2 px-6 rounded-full mt-4 inline-block font-bold hover:bg-pink-600">Find out more!</a>
+      </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+      <!-- Right side: Mascot -->
+      <div class="flex justify-end">
+        <img src="./images/vendi.png" alt="Vendigo Mascot" class="mascot"> <!-- Custom class for mascot -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="features-section mx-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+      <!-- Feature 1 -->
+      <div>
+        <h2 class="text-3xl font-bold">Toegankelijk</h2>
+        <p class="text-gray-300 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+      </div>
+      <div class="bg-yellow-500 w-full h-40"></div>
+
+      <!-- Feature 2 -->
+      <div class="bg-blue-500 w-full h-40"></div>
+      <div>
+        <h2 class="text-3xl font-bold">Interactief</h2>
+        <p class="text-gray-300 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div>
+        <h2 class="text-3xl font-bold">fgrsgrshh</h2>
+        <p class="text-gray-300 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+      </div>
+      <div class="bg-pink-500 w-full h-40"></div>
+    </div>
+  </section>
+
+  <!-- Meet the Maker Section -->
+  <section class="meet-the-maker-section py-12 px-12 mx-12">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+      <img src="./images/Sophie.jpg" alt="Sophie Van Schil" class="w-40 h-40 rounded-full"> <!-- Profile image -->
+      <div class="text-center md:text-left">
+        <h2 class="text-3xl font-bold mb-4">MEET THE MAKER</h2>
+        <p class="text-gray-300 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+        <ul class="flex justify-center md:justify-start space-x-4">
+          <li class="flex items-center space-x-2">
+            <div class="w-4 h-4 bg-pink-500"></div>
+            <span>@s0ph1edigital</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="w-4 h-4 bg-yellow-500"></div>
+            <span>@s0ph1edigital</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="w-4 h-4 bg-blue-500"></div>
+            <span>@s0ph1edigital</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile App Section -->
+  <section class="mobile-app-section flex justify-between items-center py-12 px-12 mx-12">
+    <div class="text-left w-1/2">
+      <h2 class="text-3xl font-bold mb-4">Download the vendiGO app now!</h2>
+      <p class="text-white mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+    </div>
+    <img src="./images/app.png" alt="Mobile App Screens" class="app-image w-1/2"> <!-- App image now on the right -->
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section py-12 px-12 mx-12">
+    <h2 class="text-3xl font-bold mb-4">Find Us Nearby!</h2>
+    <div id="map" class="w-full h-96 rounded-lg"></div>
+  </section>
+
+  <!-- Styles -->
+  <style>
+    /* Hero Section */
+    header {
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Logo size */
+    .logo {
+      width: 45rem;
+      margin-bottom: 0.5rem; /* Closer logo and subtext */
+    }
+
+    /* Mascot size */
+    .mascot {
+      width: 30rem; /* Increased mascot size */
+    }
+
+    /* Features Section */
+    .features-section {
+      padding-left: 6rem;
+      padding-right: 6rem;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+
+    /* Mobile App Section */
+    .mobile-app-section {
+      background-color: #FF1879;
+    }
+
+    /* App image size */
+    .app-image {
+      width: 45%;
+    }
+
+    /* Footer Section */
+    .footer-section {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
+  </style>
+
+  <!-- Map Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const map = L.map('map').setView([51.505, -0.09], 13);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+          const { latitude, longitude } = position.coords;
+          const pinkIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/images/marker-shadow.png',
+            shadowSize: [41, 41]
+          });
+          L.marker([latitude, longitude], { icon: pinkIcon }).addTo(map)
+            .bindPopup("You are here!").openPopup();
+        });
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    });
+  </script>
+
+</body>
 </html>

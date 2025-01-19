@@ -1,0 +1,151 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Tiltwarp', sans-serif;
+  background-color: #171311;
+  color: #ffffff;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  font-size: 48px;
+  color: #ff0090;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.header h2 {
+  font-size: 24px;
+  color: #ffb54f;
+  margin-top: 10px;
+}
+
+/* Bio Section */
+.bio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.bio-content {
+  max-width: 50%;
+}
+
+.bio h3 {
+  color: #ff0090;
+  margin-bottom: 15px;
+}
+
+.bio p {
+  color: #ffffff;
+}
+
+.bio-image {
+  width: 200px;
+  height: 200px;
+  background-color: #1c91d9; /* Placeholder for an image */
+  animation: slideIn 2s ease-in-out;
+}
+
+/* Portfolio Section */
+.portfolio {
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.portfolio h3 {
+  color: #ff0090;
+  margin-bottom: 20px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.portfolio-item {
+  height: 200px;
+  background-color: #ffb54f; /* Placeholder for a project image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #171311;
+  font-size: 18px;
+  font-weight: bold;
+  animation: scaleUp 3s ease-in-out infinite alternate;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact h3 {
+  color: #ff0090;
+  margin-bottom: 20px;
+}
+
+.contact ul {
+  list-style-type: none;
+}
+
+.contact li {
+  margin: 10px 0;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #ff0090;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}

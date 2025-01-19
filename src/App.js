@@ -1,84 +1,49 @@
-// Vite React Project Starter
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css'; // Separate CSS file
+import './styles.css';
 
-// Main App Component
-const App = () => {
+function App() {
   return (
-    <div>
-      <HeroSection />
-      <AboutSection />
-      <FeaturesSection />
-      <ProcessSection />
-      <BioSection />
-      <ContactSection />
-      <Footer />
+    <div className="container">
+      <header className="header">
+        <h1>Sophie Van Schil</h1>
+        <h2>Graphic and Digital Media</h2>
+      </header>
+
+      <section className="bio">
+        <div className="bio-content">
+          <h3>About Me</h3>
+          <p>
+            I'm a 3rd-year graphic design student with a passion for UI/UX
+            design and digital media. My goal is to create visually appealing
+            and user-friendly designs that make a difference.
+          </p>
+        </div>
+        <div className="bio-image"></div> {/* Placeholder for your image */}
+      </section>
+
+      <section className="portfolio">
+        <h3>My Portfolio</h3>
+        <div className="portfolio-grid">
+          <div className="portfolio-item">Project 1</div>
+          <div className="portfolio-item">Project 2</div>
+          <div className="portfolio-item">Project 3</div>
+          <div className="portfolio-item">Project 4</div>
+        </div>
+      </section>
+
+      <section className="contact">
+        <h3>Contact</h3>
+        <ul>
+          <li>Email: sophie@example.com</li>
+          <li>LinkedIn: <a href="https://linkedin.com">LinkedIn Profile</a></li>
+        </ul>
+      </section>
+
+      <footer className="footer">
+        <p>&copy; 2025 Sophie Van Schil | All rights reserved</p>
+      </footer>
     </div>
   );
-};
-
-// Individual sections of the site
-const HeroSection = () => (
-  <section className="hero">
-    <h1>Revolutionizing Vending Machines</h1>
-    <p>Simpler. Smarter. More Accessible.</p>
-    <button className="cta">Learn More</button>
-  </section>
-);
-
-const AboutSection = () => (
-  <section className="about">
-    <h2>About Vendigo</h2>
-    <p>Vendigo is dedicated to making vending machines more intuitive, accessible, and user-friendly.</p>
-    <img src="https://via.placeholder.com/300" alt="Vending Machine Concept" />
-  </section>
-);
-
-const FeaturesSection = () => (
-  <section className="features">
-    <h2>Key Features</h2>
-    <ul>
-      <li>Accessibility for Everyone</li>
-      <li>Optimized Speed and Simplicity</li>
-      <li>Clear Product Information</li>
-      <li>Commercial Benefits</li>
-    </ul>
-  </section>
-);
-
-const ProcessSection = () => (
-  <section className="process">
-    <h2>Our Process</h2>
-    <ol>
-      <li>Understand</li>
-      <li>Explore</li>
-      <li>Materialize</li>
-      <li>Finalize</li>
-    </ol>
-  </section>
-);
-
-const BioSection = () => (
-  <section className="bio">
-    <h2>About Me</h2>
-    <p>Hi, I’m Sophie Van Schil, a passionate designer focused on UX and UI solutions. Let’s connect!</p>
-    <img src="https://via.placeholder.com/150" alt="Sophie Van Schil" />
-  </section>
-);
-
-const ContactSection = () => (
-  <section className="contact">
-    <h2>Contact</h2>
-    <p>Email: sophie@example.com</p>
-    <p>Portfolio: <a href="https://yourportfolio.com">View Here</a></p>
-  </section>
-);
-
-const Footer = () => (
-  <footer>
-    <p>&copy; 2025 Vendigo. All Rights Reserved.</p>
-  </footer>
-);
+}
 
 export default App;
