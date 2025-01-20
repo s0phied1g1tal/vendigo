@@ -43,7 +43,7 @@
 
     /* App image size */
     .app-image {
-      width: 5%;
+      width: 10%;
     }
 
     /* Footer Section */
@@ -97,12 +97,6 @@
   </style>
 </head>
 <body class="bg-black text-white font-sans">
-
-  <!-- Navigation Section (Fixed to top) -->
-  <header class="fixed top-0 left-0 right-0 flex justify-between items-center py-6 px-12 bg-black z-50">
-    <a href="#" class="text-white font-bold text-xl">Home</a>
-    <a href="#portfolio" class="text-white font-bold text-xl">Portfolio</a>
-  </header>
 
   <!-- Hero Section -->
   <header class="relative w-full h-screen" style="background-image: url('./images/concept.jpg');">
@@ -215,43 +209,52 @@
   </style>
   
   
-  <!-- Meet the Maker Section -->
-  <section class="meet-the-maker-section py-12 px-12 mx-12">
-    <div class="flex flex-col md:flex-row justify-center items-center gap-8">
-      <img src="./images/Sophie.jpg" alt="Sophie Van Schil" class="w-40 h-40 rounded-full"> <!-- Profile image -->
-      <div class="text-center md:text-left">
-        <h2 class="text-3xl font-bold mb-4">Sophie Van Schil</h2>
-        <p class="text-gray-300 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
-        <ul class="flex justify-center md:justify-start space-x-4">
-          <li class="flex items-center space-x-2">
-            <div class="w-4 h-4 bg-pink-500"></div>
-            <span>@s0ph1edigital</span>
-          </li>
-          <li class="flex items-center space-x-2">
-            <div class="w-4 h-4 bg-yellow-500"></div>
-            <span>@sopsopvanschil</span>
-          </li>
-          <li class="flex items-center space-x-2">
-            <div class="w-4 h-4 bg-blue-500"></div>
-            <span>@s0ph1edigital</span>
-          </li>
-        </ul>
-      </div>
+ <!-- Meet the Maker Section -->
+ <section class="meet-the-maker-section py-12 px-12 mx-12">
+  <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+    <img src="./images/Sophie.jpg" alt="Sophie Van Schil" class="w-40 h-40 rounded-full"> <!-- Profile image -->
+    <div class="text-center md:text-left">
+      <h2 class="text-3xl font-bold mb-4">Sophie Van Schil</h2>
+      <p class="text-gray-300 mb-4">Hallo!  Ik ben Sophie Van Schil en ik ben 21 jaar oud. Op dit moment zit ik in mijn derde jaar van de opleiding Grafische Digitale Media aan de AP Hogeschool. 
+        Ik specialiseer me in interface design waardoor ik mijn weg kan met software zoals WordPress, Elementor en Visual Studio Code. Ik ben altijd op zoek naar nieuwe trucjes en innovatieve ontwerpen om mijn creativiteit een boost te geven!
+         
+        Als een nieuwsgierig type leer ik voortdurend nieuwe dingen die ik maar al te graag toevoeg aan mijn lijst van skills. In mijn vrije tijd kun je me vinden terwijl ik aan het luisteren ben naar muziek, mijn tegenstanders in videogames versla of mijn creatieve kant de vrije loop laat door te schilderen.
+        </p>
+      <ul class="flex justify-center md:justify-start space-x-4">
+        <li class="flex items-center space-x-2">
+          <div class="w-4 h-4 bg-pink-500"></div>
+          <!-- Link to social media -->
+          <a href="https://www.instagram.com/s0ph1edigital/" target="_blank"><span>Instagram</span></a>
+        </li>
+        <li class="flex items-center space-x-2">
+          <div class="w-4 h-4 bg-yellow-500"></div>
+          <!-- Link to social media -->
+          <a href="https://www.behance.net/sopsopvanschil" target="_blank"><span>Behance</span></a>
+        </li>
+        <li class="flex items-center space-x-2">
+          <div class="w-4 h-4 bg-blue-500"></div>
+          <!-- Link to social media -->
+          <a href="https://www.behance.net/gallery/208412289/Graphic-portfolio-2024-Sophie-Van-Schil" target="_blank"><span>Portfolio</span></a>
+        </li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Mobile App Section -->
   <section class="mobile-app-section flex justify-between items-center py-12 px-12 mx-12">
     <div class="text-left w-1/2">
-      <h2 class="text-3xl font-bold mb-4">Download de vendiGO app nu!</h2>
-      <p class="text-white mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+      <h2 class="text-3xl font-bold mb-4">Download de VendiGO app nu!</h2>
+      <p class="text-white mb-8">Met de Vendigo app krijg je toegang tot een revolutionaire vending machine-ervaring. Ontdek nieuwe manieren om producten te kopen, geniet van gepersonaliseerde aanbevelingen en beleef interactieve functies die je winkelervaring naar een hoger niveau tillen. Download de app nu en begin met het verkennen van de toekomst van vending machines!"
+
+Deze tekst legt de nadruk op de innovatieve aspecten van de app en moedigt de gebruiker aan om de app te downloaden voor een nieuwe ervaring.</p>
     </div>
     <img src="./images/app.png" alt="Mobile App Screens" class="app-image w-1/2"> <!-- App image now on the right -->
   </section>
 
   <!-- Map Section -->
   <section class="map-section py-12 px-12 mx-12">
-    <h2 class="text-3xl font-bold mb-4">Find Us Nearby!</h2>
+    <h2 class="text-3xl font-bold mb-4">Vind de dichtstbijzijnde VendiGO automaat!</h2>
     <div id="map" class="w-full h-96 rounded-lg"></div>
   </section>
 
