@@ -7,6 +7,94 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    /* Hero Section */
+    header {
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Logo size */
+    .logo {
+      width: 45rem;
+      margin-bottom: 0.5rem; /* Closer logo and subtext */
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    /* Mascot size */
+    .mascot {
+      width: 30rem; /* Increased mascot size */
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    /* Features Section */
+    .features-section {
+      padding-left: 6rem;
+      padding-right: 6rem;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    /* Mobile App Section */
+    .mobile-app-section {
+      background-color: #FF1879;
+    }
+
+    /* App image size */
+    .app-image {
+      width: 5%;
+    }
+
+    /* Footer Section */
+    .footer-section {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Add a hover effect on buttons */
+    .hover-effect:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Custom map marker */
+    #map {
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+  </style>
 </head>
 <body class="bg-black text-white font-sans">
 
@@ -24,7 +112,7 @@
       <div class="text-left">
         <img src="./images/logo.png" alt="Vendigo Logo" class="logo mb-2"> <!-- Custom class for logo -->
         <p class="text-xl mt-2">The interactive vending experience</p>
-        <a href="#" class="bg-pink-500 text-white py-2 px-6 rounded-full mt-4 inline-block font-bold hover:bg-pink-600">Find out more!</a>
+        <a href="#" class="bg-pink-500 text-white py-2 px-6 rounded-full mt-4 inline-block font-bold hover:bg-pink-600 hover-effect">Find out more!</a>
       </div>
 
       <!-- Right side: Mascot -->
@@ -34,38 +122,105 @@
     </div>
   </header>
 
-  <!-- Features Section -->
-  <section class="features-section mx-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-      <!-- Feature 1 -->
-      <div>
-        <h2 class="text-3xl font-bold">Toegankelijk</h2>
-        <p class="text-gray-300 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+<!-- Features Section -->
+<section class="features-section mx-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+      <!-- Feature 1: Toegankelijk -->
+      <div class="flex flex-col items-center">
+        <div class="flip-card w-80 h-80">
+          <div class="flip-card-inner">
+            <!-- Front of the card (Image) -->
+            <div class="flip-card-front">
+              <img src="./images/toegankelijk (2).png" alt="Toegankelijkheid" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <!-- Back of the card (Text) -->
+            <div class="flip-card-back flex flex-col items-center justify-center text-center p-4">
+              <h2 class="text-3xl font-bold">Toegankelijk</h2>
+              <p class="text-gray-300 mt-4">Onze vending machine is ontworpen met het oog op inclusiviteit en het vergroten van toegankelijkheid voor iedereen, ongeacht fysieke of mentale beperkingen.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="bg-yellow-500 w-full h-40"></div>
-
-      <!-- Feature 2 -->
-      <div class="bg-blue-500 w-full h-40"></div>
-      <div>
-        <h2 class="text-3xl font-bold">Interactief</h2>
-        <p class="text-gray-300 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+  
+      <!-- Feature 2: Interactief -->
+      <div class="flex flex-col items-center">
+        <div class="flip-card w-80 h-80">
+          <div class="flip-card-inner">
+            <!-- Front of the card (Image) -->
+            <div class="flip-card-front">
+              <img src="./images/interactief.png" alt="Interactief" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <!-- Back of the card (Text) -->
+            <div class="flip-card-back flex flex-col items-center justify-center text-center p-4">
+              <h2 class="text-3xl font-bold">Interactief</h2>
+              <p class="text-gray-300 mt-4">Deze vending machine doet meer dan producten aanbieden. Door interactieve elementen, zoals een touch-interface en personalisatie-opties, voelt het alsof je een gesprek hebt met een slimme assistent. Zo wordt elke interactie leuk en verrassend!</p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <!-- Feature 3 -->
-      <div>
-        <h2 class="text-3xl font-bold">fgrsgrshh</h2>
-        <p class="text-gray-300 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+  
+      <!-- Feature 3: Innovatie -->
+      <div class="flex flex-col items-center">
+        <div class="flip-card w-80 h-80">
+          <div class="flip-card-inner">
+            <!-- Front of the card (Image) -->
+            <div class="flip-card-front">
+              <img src="./images/innovatie.png" alt="Innovatie" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <!-- Back of the card (Text) -->
+            <div class="flip-card-back flex flex-col items-center justify-center text-center p-4">
+              <h2 class="text-3xl font-bold">Innovatie</h2>
+              <p class="text-gray-300 mt-4">Met een frisse kijk op vending machines combineren we technologie en design om een unieke ervaring te bieden. Denk aan slimme functies die niet alleen tijd besparen, maar ook inspelen op de behoeften van de moderne consument.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="bg-pink-500 w-full h-40"></div>
     </div>
   </section>
-
+  
+  <style>
+    /* Flip card styles */
+    .flip-card {
+      perspective: 1000px;
+    }
+  
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+  
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+  
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+  
+    .flip-card-front {
+      background-color: transparent;
+    }
+  
+    .flip-card-back {
+      background-color: #333;
+      color: white;
+      transform: rotateY(180deg);
+    }
+  </style>
+  
+  
   <!-- Meet the Maker Section -->
   <section class="meet-the-maker-section py-12 px-12 mx-12">
     <div class="flex flex-col md:flex-row justify-center items-center gap-8">
       <img src="./images/Sophie.jpg" alt="Sophie Van Schil" class="w-40 h-40 rounded-full"> <!-- Profile image -->
       <div class="text-center md:text-left">
-        <h2 class="text-3xl font-bold mb-4">MEET THE MAKER</h2>
+        <h2 class="text-3xl font-bold mb-4">Sophie Van Schil</h2>
         <p class="text-gray-300 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
         <ul class="flex justify-center md:justify-start space-x-4">
           <li class="flex items-center space-x-2">
@@ -74,7 +229,7 @@
           </li>
           <li class="flex items-center space-x-2">
             <div class="w-4 h-4 bg-yellow-500"></div>
-            <span>@s0ph1edigital</span>
+            <span>@sopsopvanschil</span>
           </li>
           <li class="flex items-center space-x-2">
             <div class="w-4 h-4 bg-blue-500"></div>
@@ -88,7 +243,7 @@
   <!-- Mobile App Section -->
   <section class="mobile-app-section flex justify-between items-center py-12 px-12 mx-12">
     <div class="text-left w-1/2">
-      <h2 class="text-3xl font-bold mb-4">Download the vendiGO app now!</h2>
+      <h2 class="text-3xl font-bold mb-4">Download de vendiGO app nu!</h2>
       <p class="text-white mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
     </div>
     <img src="./images/app.png" alt="Mobile App Screens" class="app-image w-1/2"> <!-- App image now on the right -->
@@ -99,52 +254,6 @@
     <h2 class="text-3xl font-bold mb-4">Find Us Nearby!</h2>
     <div id="map" class="w-full h-96 rounded-lg"></div>
   </section>
-
-  <!-- Styles -->
-  <style>
-    /* Hero Section */
-    header {
-      background-size: cover;
-      background-position: center;
-    }
-
-    /* Logo size */
-    .logo {
-      width: 45rem;
-      margin-bottom: 0.5rem; /* Closer logo and subtext */
-    }
-
-    /* Mascot size */
-    .mascot {
-      width: 30rem; /* Increased mascot size */
-    }
-
-    /* Features Section */
-    .features-section {
-      padding-left: 6rem;
-      padding-right: 6rem;
-      padding-top: 6rem;
-      padding-bottom: 6rem;
-    }
-
-    /* Mobile App Section */
-    .mobile-app-section {
-      background-color: #FF1879;
-    }
-
-    /* App image size */
-    .app-image {
-      width: 45%;
-    }
-
-    /* Footer Section */
-    .footer-section {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
-      padding-left: 6rem;
-      padding-right: 6rem;
-    }
-  </style>
 
   <!-- Map Script -->
   <script>
